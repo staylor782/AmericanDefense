@@ -200,6 +200,17 @@ nav {
 #view h1 {
     text-decoration: underline;
     font-weight: bolder;
+    font-size: 2em;
+}
+
+#view h3 {
+    font-size: 1.5em;
+    color: #763626;
+}
+
+#view h5 {
+    color: #336B87;
+    font-style: italic;
 }
 
 #view ul li {

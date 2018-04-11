@@ -14,23 +14,25 @@ body {
     font-family: 'Geneva', sans-serif;
 }
 
-header, footer, aside, div #view-instructor{
+header, footer, aside, div #view{
     padding: 1em;
 }
 
 
 header {
     align-content: flex-start;
-/*    padding: 5px;*/
     height: 25vh;
     font-family: 'Work+Sans', sans-serif;
     display: -webkit-flex; /* Safari */
     display: flex;
     flex: 0 1 auto;
     align-items: center;
-/*    background-color:#336B87;*/
     border-bottom: #2A3132 5px solid;
     border-top: #2A3132 5px solid;
+/*  Cuts off first section of the main portion of the page */
+/*    position: fixed;*/
+/* Background */
+    /*    background-color:#336B87;*/
 /* Improved new gradient*/
     filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#00028b, endColorstr=white);
     background-image:-moz-linear-gradient(right bottom, #00028b 22%, white 64%,#763626 81%);
@@ -47,8 +49,6 @@ header {
     width: 30%;
     display: inherit;
     background-color: inherit;
-/*    border: solid 5px #2A3132;*/
-/*    padding-left: 0.5em;*/
 }
 
 #logo-instructor {
@@ -61,14 +61,7 @@ header {
 
 nav {
     width: 100%;
-/*    display: inherit;*/
     padding-right: 1em;
-/*    margin-left: 1.5em;*/
-/*    background-color: inherit;*/
-/*
-    background-image: url(/Beretta9mm%20copy.jpeg);
-    background-size: cover;
-*/
     display: flex;
     display: -webkit-flex; /* Safari */
     flex: 0 1 auto;
@@ -106,7 +99,6 @@ nav {
 	background: -moz-linear-gradient(top, #90AFC5, #336B87);
 	background: -o-linear-gradient(top, #90AFC5, #336B87);
 	background: -ms-linear-gradient(top, #90AFC5, #336B87);
-/*    outline: #90AFC5 ridge 5px;*/
     padding: 10px;
     background-color: inherit;
     text-align: center;
@@ -126,7 +118,6 @@ nav {
 	background: -moz-linear-gradient(top, #90AFC5, #336B87);
 	background: -o-linear-gradient(top, #90AFC5, #336B87);
 	background: -ms-linear-gradient(top, #90AFC5, #336B87);
-/*    outline: #90AFC5 ridge 5px;*/
     padding: 10px;
     background-color: inherit;
     text-align: center;
@@ -139,112 +130,107 @@ nav {
 
 #main-instructor {
     margin: 0, 20px, 0, 20px;
-/*    padding: 5px;*/
     background: #2A3132;
     align-items: stretch;
     display: flex;
     display: -webkit-flex; /* Safari */
     flex-flow: column;
-/*    flex-grow: 1; Used to fill the rest of the page as there is not enough content */
-/*    flex-direction: row;*/
-/*    flex: 3;*/
-/*
-    height: auto;
-    width: auto;
-*/
-/*
-    min-height: 100%;
-    max-height: 100%;
-*/
     max-width: 100%;
     text-align: center;
-    background-image: url(/Images/flag.png);
-    background-size: 100%;
-/*    opacity: 0.5;*/
+/* Background */
     background-color: rgba(255,255,255,0.7);
-/*    overflow: hidden;*/
+    background: url(/Images/flag.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-
-/*
-#main-instructor > aside {
-  flex: 0 0 15vw;
-  background: #2A3132;
-}
-#main-instructor > .aside-left {
-    order: 1;
-}
-#main-instructor > .aside-right {
-    order: 3;
-}
-*/
-
-/*
-#main-background-instructor {
-    opacity: 0.5;
-    height: auto;
-    width: auto;
-    max-height: 100%;
-    max-width: 100%;
-}
-*/
 
 #view-container-instructor {
     width: 80%;
-/*
-    min-height: 100%;
-    max-height: 100%;
-*/
-    background: white;
-/*
-    position: fixed;
-    overflow-y: scroll;
-*/
     margin: 0 auto;
-    display: inherit;
-    flex-flow: row wrap;
+    background: white;
 }
 
 #view-instructor {
-    display: flex;
-    display: -webkit-flex; /* Safari */
-    flex: 1 0 50%;
-    flex-flow: row wrap;
-    list-style-type: none;
+    text-align: left;
     padding: 15px;
-    align-items: center;
-    justify-content: center;
-/*    order: 2;*/
-/*
-    min-height: 100%;
-    max-height: 100%;
-*/
+    margin: 10px;
+    word-wrap: break-word;
+    display: block;
+    float: left;
 }
 
-#view-instructor p img {
+#view-instructor p h1 h3 {
+/*
+    float: left;
+    clear: both;
+*/
 /*
     width: 40%;
     margin: 10px;
 */
 /*    display: inline-block;*/
 }
+
 #view-instructor img {
     float: right;
+    clear: right;
+    height: auto;
+    width: auto;
+    border: #763626 1px solid;
+    padding: 5px;
+    margin: 5px;
+}
+
+#spec-instructor {
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    float: none;
+    justify-content: center;
+}
+
+#spec-instructor img{
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 /*
-
-@media all and (min-width: 600px) {
-    .aside { flex: 1 auto; }
+#size-instructor {
+    width: 200px;
+    height: 180px;
 }
 
-@media all and (min-width: 800px) {
-    .main    { flex: 5 0px; }
-    .aside-left { order: 1; } 
-    .main    { order: 2; }
-    .aside-right { order: 3; }
-    .footer  { order: 4; }
+#size-instructor img{
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 */
+
+#view-instructor h1 {
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+#view-instructor h3 {
+    font-size: 1.5em;
+    color: #763626;
+}
+
+#view-instructor h5 {
+    color: #336B87;
+    font-style: italic;
+}
+
+#view-instructor ul li {
+    list-style-position: inside;
+    padding: 5px;
+}
 
 .copyright {
     margin-right: auto;
@@ -252,10 +238,7 @@ nav {
 }
 
 .footer {
-/*    width: 100%;*/
-/*    height: 10%;*/
     background-color: #763626;
-/*    position: absolute;*/
     height: 50px;
     bottom: 0px;
     left: 0px;
@@ -272,6 +255,17 @@ footer p {
     color: white;
 }
 
-footer a img {
-    
+/* Media Queries */
+/*
+@media all and (min-width: 600px) {
+    .aside { flex: 1 auto; }
 }
+
+@media all and (min-width: 800px) {
+    .main    { flex: 5 0px; }
+    .aside-left { order: 1; } 
+    .main    { order: 2; }
+    .aside-right { order: 3; }
+    .footer  { order: 4; }
+}
+*/
