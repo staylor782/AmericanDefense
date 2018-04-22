@@ -180,7 +180,7 @@ nav {
     width: auto;
     border: #763626 1px solid;
     padding: 5px;
-    margin: 5px;
+    margin: 10px, 5px, 10px, 5px;
 }
 
 #spec-instructor {
