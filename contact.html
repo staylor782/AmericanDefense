@@ -1,3 +1,4 @@
+<!--<?php session_start() ?>-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,6 +10,7 @@
         <header>
                 <div id="logo-container-contact">
                     <a href="index.html"><img id="logo-contact" src="Images/OfficialLogo.jpg"/></a>
+<!--                    <a href="index.html" id="text-contact">American Defense LLC</a>-->
                 </div>
                 <nav>
                     <ul class="nav-menu">
@@ -24,35 +26,30 @@
             <div id="view-container-contact">
                 <div id="view-contact">
                     <h1>Contact Us!</h1><br>
-                    <p>You can reach us currently via email at <span style="color: blue">americandefensellc@gmail.com</span> and also via phone at <span style="color: blue">1-208-409-3374</span></p>
-                    <div id="spec-contact">
-                        <img src="Images/maintenance.png"><br>
+                    <p>We would love to hear from you! To register for a class, request information, or provide feedback, please fill out the form below. You can also reach us directly via email at <span style="color: blue">americandefensellc@gmail.com</span> and via phone at <span style="color: blue">1-208-409-3374</span></p>
+                    <div id="contact-form">
+                        <form method="post" action="contact.php">
+                            <label for="name">Name: <span class="required">*</span></label>
+                            <input type="text" name="name" value="" placeholder="John Doe" required="required">
+
+                            <label for="email">Email: <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" value="" placeholder="johndoe@example.com" required="required">
+                            
+                            <label for="phone">Phone: <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" value="" placeholder="000-000-0000" required="required">
+                            
+                            <label for="subject">Subject: <span class="required">*</span></label>
+                            <input type="text" id="subject" name="subject" value="">
+                            
+                            <label for="message">Message: <span class="required">*</span></label>
+                            <textarea id="message" name="message" placeholder="Type your request here" required="required"></textarea>
+
+                            <input type="submit" value="Submit" id="submit-button">
+                            
+                            <p id="req-field-desc"><span class="required">*</span> indicates a required field</p>
+                        </form>
+<!--                        <?php unset($_SESSION[]); ?>-->
                     </div>
-<!--
-                    <p>Fill out the form below or you can reach us via email at <span style="color: blue">americandefensellc@gmail.com</span> and also via phone at <span style="color: blue">1-208-409-3374</span></p>
-                    <form>
-                        <div class="form-row">
-                            <label class="form-label">Name: <span class="form-req">*</span></label>
-                            <input type="text" name="name" class="form-value">
-                        </div>
-                        <div class="form-row">
-                            <label class="form-label">Email: <span class="form-req">*</span></label>
-                            <input type="text" name="email" class="form-value">
-                            <label class="form-label opt-in-label"><input type="checkbox" name="opt-in" class="opt-in-checkbox">Check here to receive email updates</label>
-                        </div>
-                        <div class="form-row">
-                            <label class="form-label">Subject: <span class="form-req">*</span></label>
-                            <input type="text" name="subject" class="form-value">
-                        </div>
-                        <div class="form-row">
-                            <label class="form-label">Message: <span class="form-req">*</span></label>
-                            <textarea name="message" class="form-value"></textarea>
-                        </div>
-                        <div class="form-row">
-                            <input type="submit" value="Submit" class="form-submit" onclick="return false;">
-                        </div>
-                    </form>
--->
                 </div>
             </div>
         </div>

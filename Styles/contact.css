@@ -59,6 +59,12 @@ header {
     opacity: 20%;
 }
 
+/*
+#text-contact {
+    display: none;
+}
+*/
+
 nav {
     width: 100%;
     padding-right: 1em;
@@ -241,12 +247,139 @@ footer p {
     color: white;
 }
 
-/* Media Queries */
-/*
-@media all and (min-width: 600px) {
-    .aside { flex: 1 auto; }
+/* Form Styles */
+#contact-form {
+/*    background-color:#F2F7F9;*/
+/*    width:465px;*/
+    padding:20px;
+    margin: 50px auto;    
+    border: 6px solid #8FB5C1;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+/*    position:relative;*/
+}
+ 
+#contact-form h1 {
+    font-size:42px;
+}
+ 
+#contact-form h2 {
+    margin-bottom:15px;
+    font-style:italic;
+    font-weight:normal;
+}
+ 
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea, 
+#contact-form label {
+    font-size:15px;
+    margin-bottom:2px;
+}
+ 
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea {
+    width:80%;
+    border: 1px solid #CEE1E8;
+    margin-bottom:20px;
+    padding:4px;
+}
+ 
+#contact-form input:focus, 
+#contact-form select:focus, 
+#contact-form textarea:focus {
+    border: 1px solid #AFCDD8;
+    background-color: #EBF2F4;
+}
+ 
+#contact-form textarea {
+    height:150px;
+    resize: none;
+}
+ 
+#contact-form label {
+    display:block;
+}
+ 
+#contact-form .required {
+    font-weight:bold;
+    color:#F00;    
+}
+ 
+#contact-form #submit-button {
+    width: 100px;
+    background-color:#333;
+    color:#FFF;
+    border:none;
+    display:block;
+/*    float:right;*/
+    margin-bottom:6px;
+    margin-right:6px;
+    background-color:#8FB5C1;
+    -moz-border-radius:8px;
+}
+ 
+#contact-form #submit-button:hover {
+    background-color: #A6CFDD;
+}
+ 
+#contact-form #submit-button:active {
+/*    position:relative;*/
+    top:1px;
+}
+ 
+#req-field-desc {
+    font-style:italic;
+}
+ 
+/* Remove box shadow firefox, chrome and opera put around required fields. It looks rubbish. */
+input:required, textarea:required {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    -o-box-shadow:none;
+    box-shadow:none;
+}
+ 
+/* Normalize placeholder styles */
+ 
+/* chrome, safari */
+::-webkit-input-placeholder {
+    color:#CCC;
+    font-style:italic;
+}
+ 
+/* mozilla */
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#CCC;
+    font-style:italic;
+}
+ 
+/* ie (faux placeholder) */
+input.placeholder-text, textarea.placeholder-text  { 
+    color:#CCC;
+    font-style:italic;
 }
 
+/* Media Queries */
+@media all and (max-width: 1000px) {
+    #logo-container-contact { display:none; }
+/*
+    #logo-container-contact {
+        width: 50%;
+        position: relative;
+        z-index: -1;
+    }
+    #text-contact { 
+        top:auto;
+        color: whitesmoke;
+        
+    }
+*/
+}
+
+/*
 @media all and (min-width: 800px) {
     .main    { flex: 5 0px; }
     .aside-left { order: 1; } 

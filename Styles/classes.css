@@ -242,16 +242,6 @@ footer p {
 }
 
 /* Media Queries */
-/*
-@media all and (min-width: 600px) {
-    .aside { flex: 1 auto; }
+@media all and (max-width: 1000px) {
+    #logo-container-classes { display:none; }
 }
-
-@media all and (min-width: 800px) {
-    .main    { flex: 5 0px; }
-    .aside-left { order: 1; } 
-    .main    { order: 2; }
-    .aside-right { order: 3; }
-    .footer  { order: 4; }
-}
-*/
